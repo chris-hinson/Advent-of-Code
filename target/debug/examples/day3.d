@@ -1,1 +1,1 @@
-/home/chris/Documents/projects/Advent-of-Code/target/debug/examples/day3: /home/chris/Documents/projects/Advent-of-Code/examples/day3.rs
+/home/chris/Documents/projects/AoC/target/debug/examples/day3: /home/chris/Documents/projects/AoC/examples/day3.rs
