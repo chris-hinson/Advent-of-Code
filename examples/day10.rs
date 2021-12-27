@@ -4,7 +4,7 @@
 use std::fs;
 
 fn main() {
-    let filename = "input10.txt";
+    let filename = "input10_KEVIN.txt";
     let contents = fs::read_to_string(filename).expect("Something went wrong reading the file");
 
     let mut lines = contents
@@ -13,6 +13,8 @@ fn main() {
         .iter()
         .map(|line| line.chars().collect::<Vec<char>>())
         .collect::<Vec<Vec<char>>>();
+
+    let indexing_lines = lines.clone();
 
     //day 1 scoring var
     let mut score: i32 = 0;
@@ -23,7 +25,7 @@ fn main() {
     lines.retain(|line| {
         let mut stack: Vec<char> = Vec::new();
         let mut is_corrupted = false;
-        for char in line.iter() {
+        for (char_index, char) in line.iter().enumerate() {
             //if we have an opening delimiter, push it on the stack
             if char.eq(&'(') || char.eq(&'{') || char.eq(&'[') || char.eq(&'<') {
                 stack.push(*char);
@@ -44,12 +46,33 @@ fn main() {
                 //break the line iteration
                 if is_corrupted {
                     //corrupted.push(line.to_vec());
+                    print!(
+                        "line: {}\n{} ",
+                        indexing_lines.iter().position(|ele| ele == line).unwrap() + 1,
+                        line.iter().collect::<String>()
+                    );
 
                     match char {
-                        ')' => score += 3,
-                        '}' => score += 1197,
-                        ']' => score += 57,
-                        '>' => score += 25137,
+                        ')' => {
+                            score += 3;
+                            print!("corrupted on char: {} ", char_index + 1);
+                            println!(" adding 3, total is now {}", score);
+                        }
+                        '}' => {
+                            score += 1197;
+                            print!("corrupted on char: {} ", char_index + 1);
+                            println!("adding 1197, total is now {}", score);
+                        }
+                        ']' => {
+                            score += 57;
+                            print!("corrupted on char: {} ", char_index + 1);
+                            println!("adding 57, total is now {}", score);
+                        }
+                        '>' => {
+                            score += 25137;
+                            print!("corrupted on char: {} ", char_index + 1);
+                            println!("adding 25137, total is now {}", score);
+                        }
                         _ => (),
                     };
 

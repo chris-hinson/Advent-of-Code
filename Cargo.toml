@@ -11,3 +11,4 @@ edition = "2021"
 
 [dependencies]
 rayon = "1.5"
+regex = "1.5.4"
