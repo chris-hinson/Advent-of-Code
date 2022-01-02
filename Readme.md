@@ -11,6 +11,12 @@ To run a particular day, invoke ```cargo run --bin dayX``` to invoke the runner,
 Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.txt``` where XX corresponds to the day.  If this file does not exist, the solution will panic.
 
 ## Solution statuses
+⭐ = solved problem (two possible per day)
+
+✔️ = started solution, not passing
+
+❌ = has not been attempted
+
 | Day       | Name/Description | Status  |
 | ----------|-------------| :---:|
 |1 |Sonar Sweep | ⭐⭐|
@@ -20,24 +26,24 @@ Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.t
 |5 |Hydrothermal Venture (lines) |⭐⭐|
 |6 |Lanternfish (exponential growth) |⭐⭐|
 |7 |The Treachery of Whales (horiz. crab move) |⭐⭐|
-|8 |test | x|
-|9 |test | x|
-|10 |test | x|
-|11 |test | x|
-|12 |test | x|
-|13 |test | x|
-|14 |test | ❌|
-|15 |test | x|
-|16 |test | x|
-|17 |test | x|
-|18 |test | x|
-|19 |test | x|
-|20 |test | x|
-|21 |test | x|
-|22 |test | x|
-|23 |test | x|
-|24 |test | x|
-|25 |test | x|
+|8 |Seven Segment Search |⭐|
+|9 |Smoke Basin | ⭐|
+|10 |Syntax Scoring (stack!) |⭐|
+|11 |Dumbo Octopus | ✔️|
+|12 | Passage Pathing| ❌|
+|13 |Transparent Origami | ⭐⭐|
+|14 |Extended Polymerization | ⭐|
+|15 |Chiton |❌|
+|16 |Packet Decoder | ❌|
+|17 |Trick Shot | ❌|
+|18 |Snailfish | ❌|
+|19 |Beacon Scanner | ❌|
+|20 |Trench Map | ❌|
+|21 |Dirac Dice | ❌|
+|22 |Reactor Reboot | ❌|
+|23 |Amphipod | ❌|
+|24 |Arithmetic Logic Unit | ✔️|
+|25 |Sea Cucumber | ⭐|
 
 
 ## About Me 
