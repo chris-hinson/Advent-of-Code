@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in {1..25}
+do
+  wget --load-cookies=/home/chris/Downloads/adventofcode.com_cookies.txt  https://adventofcode.com/2021/day/$i/input -O input$i.txt
+done
