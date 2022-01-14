@@ -5,7 +5,7 @@
 use std::fs;
 
 fn main() {
-    let filename = "input1.txt";
+    let filename = "./inputs/input1.txt";
     let contents = fs::read_to_string(filename).expect("Something went wrong reading the file");
     let depths: Vec<i32> = contents
         .lines()
