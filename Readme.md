@@ -27,14 +27,14 @@ Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.t
 |6 |Lanternfish (exponential growth) |⭐⭐|
 |7 |The Treachery of Whales (horiz. crab move) |⭐⭐|
 |8 |Seven Segment Search |⭐|
-|9 |Smoke Basin | ⭐|
+|9 |Smoke Basin |⭐|
 |10 |Syntax Scoring (stack!) |⭐|
-|11 |Dumbo Octopus | ✔️|
-|12 | Passage Pathing| ❌|
-|13 |Transparent Origami | ⭐⭐|
-|14 |Extended Polymerization | ⭐|
+|11 |Dumbo Octopus |✔️|
+|12 | Passage Pathing|❌|
+|13 |Transparent Origami |⭐⭐|
+|14 |Extended Polymerization |⭐|
 |15 |Chiton |❌|
-|16 |Packet Decoder | ❌|
+|16 |Packet Decoder |⭐|
 |17 |Trick Shot | ❌|
 |18 |Snailfish | ❌|
 |19 |Beacon Scanner | ❌|
@@ -46,5 +46,5 @@ Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.t
 |25 |Sea Cucumber | ⭐|
 
 
-## About Me 
+## About Me
 My name is Christopher Hinson and I'm a computer science BS+MS student at the University of Pittsburgh
