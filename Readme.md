@@ -34,7 +34,7 @@ Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.t
 |13 |Transparent Origami |⭐⭐|
 |14 |Extended Polymerization |⭐|
 |15 |Chiton |❌|
-|16 |Packet Decoder |⭐|
+|16 |Packet Decoder |⭐⭐|
 |17 |Trick Shot | ❌|
 |18 |Snailfish | ❌|
 |19 |Beacon Scanner | ❌|

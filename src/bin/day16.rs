@@ -169,6 +169,8 @@ fn main() {
     println!("{sum}");
 
     println!("{}", head);
+
+    println!("{}", eval(&head));
 }
 
 fn sum_tree(node: &Packet, sum: &mut i128) {
@@ -180,5 +182,74 @@ fn sum_tree(node: &Packet, sum: &mut i128) {
     //otherwise recurse on each child in order
     for child in node.children.as_ref().unwrap() {
         sum_tree(&child, sum);
+    }
+}
+
+fn eval(node: &Packet) -> i128 {
+    if node.children.is_none() {
+        return node.data.unwrap();
+    }
+
+    match node.packet_type {
+        //sum
+        0 => {
+            let mut total = 0;
+            for node in node.children.as_ref().unwrap() {
+                total += eval(&node);
+            }
+            return total;
+        }
+        //prod
+        1 => {
+            //println!("HITTING MULTIPLICATIONNNNNNNNNNNNNNNNNNNNNNN");
+            let mut total = 1;
+            for node in node.children.as_ref().unwrap() {
+                total *= eval(&node);
+            }
+            return total;
+        }
+        //min
+        2 => {
+            let mut vals = Vec::new();
+            for node in node.children.as_ref().unwrap() {
+                vals.push(eval(&node));
+            }
+
+            return *vals.iter().min().unwrap();
+        }
+        //max
+        3 => {
+            let mut vals = Vec::new();
+            for node in node.children.as_ref().unwrap() {
+                vals.push(eval(&node));
+            }
+
+            return *vals.iter().max().unwrap();
+        }
+        //PANIC PANIC PANIC THIS IS BAD
+        4 => -1,
+        //gt
+        5 => {
+            let left = eval(&node.children.as_ref().unwrap()[0]);
+            let right = eval(&node.children.as_ref().unwrap()[1]);
+
+            return if left > right { 1 } else { 0 };
+        }
+        //lt
+        6 => {
+            let left = eval(&node.children.as_ref().unwrap()[0]);
+            let right = eval(&node.children.as_ref().unwrap()[1]);
+
+            return if left < right { 1 } else { 0 };
+        }
+        //eq
+        7 => {
+            let left = eval(&node.children.as_ref().unwrap()[0]);
+            let right = eval(&node.children.as_ref().unwrap()[1]);
+
+            return if left == right { 1 } else { 0 };
+        }
+        //PANIC PANIC PANIC THIS IS BAD
+        _ => -1,
     }
 }
