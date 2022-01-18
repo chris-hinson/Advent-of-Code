@@ -28,7 +28,7 @@ Solutions expect their input in the ```/inputs/``` directory, named ```inputXX.t
 |7 |The Treachery of Whales (horiz. crab move) |⭐⭐|
 |8 |Seven Segment Search |⭐|
 |9 |Smoke Basin |⭐|
-|10 |Syntax Scoring (stack!) |⭐|
+|10 |Syntax Scoring (stack!) |⭐⭐|
 |11 |Dumbo Octopus |⭐⭐|
 |12 | Passage Pathing|❌|
 |13 |Transparent Origami |⭐⭐|
